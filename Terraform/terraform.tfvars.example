@@ -1,0 +1,6 @@
+tenancy_ocid   = "ocid1.tenancy.oc1..REEMPLAZAR"
+region         = "sa-saopaulo-1"
+ssh_public_key = "ssh-rsa REEMPLAZAR"
+instance_shape = "VM.Standard.E2.1.Micro"
+availability_domain = "REEMPLAZAR_CON_AD_DE_LA_REGION"
+image_ocid = "ocid1.image.oc1.sa-saopaulo-1.REEMPLAZAR"

@@ -25,7 +25,6 @@ jobs:
       TF_VAR_region: ${{ secrets.OCI_REGION }}
       TF_VAR_ssh_public_key: ${{ secrets.OCI_SSH_PUBLIC_KEY }}
       TF_VAR_availability_domain: ${{ vars.OCI_AVAILABILITY_DOMAIN }}
-      TF_VAR_image_ocid: ${{ vars.OCI_IMAGE_OCID }}
 
     steps:
       - name: Descargar codigo

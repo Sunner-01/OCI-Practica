@@ -49,14 +49,28 @@ resource "oci_core_subnet" "publica" {
   route_table_id             = oci_core_default_route_table.practica.id
   security_list_ids          = [oci_core_security_list.practica.id]
 }
+
+data "oci_core_images" "ubuntu" {
+  compartment_id   = var.tenancy_ocid
+  operating_system = "Canonical Ubuntu"
+  shape            = var.instance_shape
+  state            = "AVAILABLE"
+  sort_by          = "TIMECREATED"
+  sort_order       = "DESC"
+}
+
 resource "oci_core_instance" "practica" {
   compartment_id      = oci_identity_compartment.practica.id
   availability_domain = var.availability_domain
   display_name        = "vm-practica-terraform"
   shape               = var.instance_shape
+  shape_config {
+    ocpus         = 1
+    memory_in_gbs = 6
+  }
   source_details {
     source_type = "image"
-    source_id   = var.image_ocid
+    source_id   = data.oci_core_images.ubuntu.images[0].id
   }
   create_vnic_details {
     subnet_id        = oci_core_subnet.publica.id

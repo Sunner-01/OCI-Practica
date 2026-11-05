@@ -18,13 +18,9 @@ variable "ssh_public_key" {
 variable "instance_shape" {
   description = "Shape de la máquina virtual."
   type        = string
-  default     = "VM.Standard.E2.1.Micro"
+  default     = "VM.Standard.A1.Flex"
 }
 variable "availability_domain" {
   description = "Dominio de disponibilidad de la region elegida"
-  type        = string
-}
-variable "image_ocid" {
-  description = "OCID de imagen compatible con el shape elegido"
   type        = string
 }

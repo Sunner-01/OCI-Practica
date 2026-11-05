@@ -1,5 +1,5 @@
 tenancy_ocid   = "ocid1.tenancy.oc1..REEMPLAZAR"
 region         = "sa-saopaulo-1"
 ssh_public_key = "ssh-rsa REEMPLAZAR"
-instance_shape = "VM.Standard.A1.Flex"
+instance_shape = "VM.Standard.E5.Flex"
 availability_domain = "REEMPLAZAR_CON_AD_DE_LA_REGION"

@@ -66,7 +66,7 @@ resource "oci_core_instance" "practica" {
   shape               = var.instance_shape
   shape_config {
     ocpus         = 1
-    memory_in_gbs = 1
+    memory_in_gbs = 2
   }
   source_details {
     source_type = "image"

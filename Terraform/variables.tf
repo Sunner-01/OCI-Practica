@@ -18,7 +18,7 @@ variable "ssh_public_key" {
 variable "instance_shape" {
   description = "Shape de la máquina virtual."
   type        = string
-  default     = "VM.Standard.A1.Flex"
+  default     = "VM.Standard.E5.Flex"
 }
 variable "availability_domain" {
   description = "Dominio de disponibilidad de la region elegida"
